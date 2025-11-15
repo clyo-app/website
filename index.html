@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clyo - The Future of Communication</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="particles-js"></canvas>
+
+    <header class="main-header">
+        <div class="logo">
+            <img src="../app/assets/icons/icon-full.png" alt="Clyo Logo">
+            <span>Clyo</span>
+        </div>
+        <nav>
+            <a href="#features">Features</a>
+            <a href="#security">Security</a>
+            <a href="#subscribe" class="cta-button">Get Notified</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-container">
+                <div class="hero-text-content">
+                    <h1 class="main-heading">Where Messaging Meets Community</h1>
+                    <p class="sub-heading">Experience a new way to connect. Private chats with end-to-end encryption. Community spaces to share your passions. All in one secure app.</p>
+                    <a href="#subscribe" class="hero-cta">Join the Beta</a>
+                </div>
+                <div class="hero-demo">
+                    <div class="phone-mockup">
+                        <div class="phone-screen">
+                            <div class="demo-chat">
+                                <div class="chat-header">
+                                    <span class="chat-status">Friends</span>
+                                </div>
+                                <div class="chat-list">
+                                    <div class="chat-item active">
+                                        <div class="avatar avatar-1">A</div>
+                                        <div class="chat-info">
+                                            <div class="chat-name">Alex</div>
+                                            <div class="chat-preview">That sounds great! 🎉</div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-item">
+                                        <div class="avatar avatar-2">C</div>
+                                        <div class="chat-info">
+                                            <div class="chat-name">Tech Lovers</div>
+                                            <div class="chat-preview">New projects coming soon...</div>
+                                        </div>
+                                    </div>
+                                    <div class="chat-item">
+                                        <div class="avatar avatar-3">J</div>
+                                        <div class="chat-info">
+                                            <div class="chat-name">Jordan</div>
+                                            <div class="chat-preview">See you tomorrow!</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="demo-message-thread">
+                                <div class="message incoming">Hey! How's your day going?</div>
+                                <div class="message outgoing">Pretty good! Just working on some projects</div>
+                                <div class="message incoming">That sounds great! 🎉</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <div class="features-container">
+                <h2 class="section-title">Built for Real Connection</h2>
+                <p class="section-subtitle">Two powerful modes, one unified experience</p>
+                
+                <div class="features-split">
+                    <div class="feature-mode">
+                        <div class="mode-header">
+                            <div class="mode-icon">�</div>
+                            <h3>Private Messaging</h3>
+                        </div>
+                        <div class="mode-content">
+                            <div class="mode-item">
+                                <div class="item-number">01</div>
+                                <div class="item-text">
+                                    <h4>One-on-One Chats</h4>
+                                    <p>Secure conversations with friends. End-to-end encrypted, so only you can read what you send.</p>
+                                </div>
+                            </div>
+                            <div class="mode-item">
+                                <div class="item-number">02</div>
+                                <div class="item-text">
+                                    <h4>Group Messages</h4>
+                                    <p>Keep your circle close. Create encrypted group chats with your friends and family.</p>
+                                </div>
+                            </div>
+                            <div class="mode-item">
+                                <div class="item-number">03</div>
+                                <div class="item-text">
+                                    <h4>Rich Media</h4>
+                                    <p>Share voice messages, photos, and videos. All encrypted and private.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="feature-mode">
+                        <div class="mode-header">
+                            <div class="mode-icon">�️</div>
+                            <h3>Community Spaces</h3>
+                        </div>
+                        <div class="mode-content">
+                            <div class="mode-item">
+                                <div class="item-number">01</div>
+                                <div class="item-text">
+                                    <h4>Join Communities</h4>
+                                    <p>Discover and join spaces dedicated to your interests. From tech to hobbies.</p>
+                                </div>
+                            </div>
+                            <div class="mode-item">
+                                <div class="item-number">02</div>
+                                <div class="item-text">
+                                    <h4>Organized Rooms</h4>
+                                    <p>Each space has dedicated rooms for different topics. Keep discussions focused and organized.</p>
+                                </div>
+                            </div>
+                            <div class="mode-item">
+                                <div class="item-number">03</div>
+                                <div class="item-text">
+                                    <h4>Moderation Tools</h4>
+                                    <p>Community managers have powerful tools to keep spaces safe and welcoming.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="security" class="security-section">
+            <h2 class="section-title">Privacy First, Always</h2>
+            <p class="section-subtitle">Your data, your control. We've designed Clyo from the ground up with security at its core.</p>
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="card-header">
+                        <div class="security-icon">🔑</div>
+                        <h3>Passkey Authentication</h3>
+                    </div>
+                    <p>Say goodbye to passwords. Log in with your face, fingerprint, or security key. Faster and safer.</p>
+                </div>
+                <div class="security-card">
+                    <div class="card-header">
+                        <div class="security-icon">🛡️</div>
+                        <h3>End-to-End Encryption</h3>
+                    </div>
+                    <p>RSA + AES encryption keeps your messages private. Not even we can read them.</p>
+                </div>
+                <div class="security-card">
+                    <div class="card-header">
+                        <div class="security-icon">🔒</div>
+                        <h3>Zero Knowledge</h3>
+                    </div>
+                    <p>We don't store your keys, backups, or metadata. Complete privacy by design.</p>
+                </div>
+                <div class="security-card">
+                    <div class="card-header">
+                        <div class="security-icon">🌐</div>
+                        <h3>Hardened Infrastructure</h3>
+                    </div>
+                    <p>Modern security standards, strict HTTPS, and protection against common web attacks.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="subscribe" class="subscribe-section">
+            <div class="subscribe-content">
+                <h2>Ready to make the switch?</h2>
+                <p>Join thousands of people reclaiming their privacy. Be notified when Clyo launches.</p>
+                <form id="subscribe-form">
+                    <div class="input-wrapper">
+                        <input type="email" placeholder="you@example.com" required>
+                        <button type="submit">Notify Me</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <footer class="main-footer-bottom">
+        <p>&copy; 2025 Clyo. All rights reserved. | A new vision for social media.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
