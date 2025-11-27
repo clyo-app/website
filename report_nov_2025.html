@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clyo - November 2025 Update</title>
+    <link rel="stylesheet" href="report.css">
+</head>
+<body>
+
+    <header class="report-header">
+        <a href="index.html" class="logo">
+            <img src="icon-full.png" alt="Clyo Logo">
+            <span>Clyo</span>
+        </a>
+        <span class="report-badge">Monthly Report</span>
+    </header>
+
+    <div class="container">
+        
+        <!-- HERO -->
+        <section class="report-hero visible">
+            <span class="report-meta">November 2025 • Engineering & Design</span>
+            <h1>The "Secure Media" Update</h1>
+            <p>This month, we focused on bridging the gap between secure messaging and rich media sharing, while refining the core experience across all platforms.</p>
+        </section>
+
+        <!-- 1. UI REFINEMENTS -->
+        <section>
+            <h2>User Experience Refined</h2>
+            <p>We continued to polish the application's look and feel. Our Material Design 3 implementation has been fine-tuned for better consistency and fluidity across devices, including the new Linux desktop build.</p>
+            
+            <div class="showcase-container">
+                <img src="Screenshot_debug.png" alt="Clyo App Screenshot" class="app-screenshot">
+            </div>
+        </section>
+
+        <!-- 2. SECURE MEDIA (THE NEW STUFF) -->
+        <section>
+            <h2>Major Feature: Secure Media Sharing</h2>
+            <p>Sending photos and files was the missing piece of the puzzle. We implemented a robust, zero-knowledge system for handling media attachments.</p>
+            
+            <ul class="tech-list">
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Enhanced E2E Encryption</strong><br>
+                        <span style="color: var(--sys-text-muted); font-size: 0.9rem;">Extended our crypto protocol. Files are now encrypted with AES-GCM keys on the device before upload.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Ephemeral Storage (MinIO)</strong><br>
+                        <span style="color: var(--sys-text-muted); font-size: 0.9rem;">We integrated MinIO object storage. Media files are automatically wiped from our servers the moment they are delivered to all recipients.</span>
+                    </div>
+                </li>
+                <li>
+                    <span class="check-icon">✓</span>
+                    <div>
+                        <strong>Persistent Local Cache</strong><br>
+                        <span style="color: var(--sys-text-muted); font-size: 0.9rem;">Downloaded media is stored securely in your device's document storage, so it doesn't disappear when you close the app, even though it's gone from the server.</span>
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <!-- 3. INFRASTRUCTURE -->
+        <section>
+            <h2>Infrastructure Upgrades</h2>
+            <p>To support these new features, we made significant changes under the hood.</p>
+            
+            <div class="grid-2">
+                <div class="card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Real-Time WebSockets</h3>
+                    <p>We finalized the transition to a full WebSocket architecture. Messaging is now instant, reliable, and battery-efficient compared to old polling methods.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🐧</div>
+                    <h3>Linux Desktop Support</h3>
+                    <p>Clyo is truly cross-platform. We added native support for Linux, including SQLite FFI for local storage and unique device identification.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- PREVIOUSLY REPORTED PROGRESS (from monthly_report.md) -->
+        <section>
+            <h2>Previously Reported Progress</h2>
+            <p>Here's a detailed look at the project's status as of our last report, highlighting key areas of development and architectural decisions.</p>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Project Overview</h3>
+            <p style="color: var(--sys-text-muted);">Clyo is an innovative social communication platform aiming to combine the best elements of apps like WhatsApp, Snapchat, Instagram, and Facebook. Our main goal is to build a secure and privacy-focused messenger with end-to-end encryption (E2EE), offering rich communication options within group chats and communities (Spaces).</p>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Frontend (Flutter App - `app/`)</h3>
+            <ul class="tech-list" style="padding: 1rem 2rem;">
+                <li><span class="check-icon">✓</span> <strong>Status:</strong> The application is developed in Flutter, ensuring multi-platform availability (Android, iOS, Web, Desktop).</li>
+                <li><span class="check-icon">✓</span> <strong>Key Areas:</strong> Strong emphasis is placed on <strong>end-to-end encryption (E2EE)</strong> using libraries like `pointycastle`, ensuring maximum user privacy.</li>
+                <li><span class="check-icon">✓</span> <strong>Communication Model:</strong> A dual chat model is implemented – <strong>Groups</strong> for small, private conversations and <strong>Spaces</strong> for larger communities with multiple rooms (`text`, `voice`, `post`).</li>
+                <li><span class="check-icon">✓</span> <strong>Ongoing Work:</strong> Actively working on refining the user interface and stability for existing features like text and voice messages. We had pending UI for attachments (photos, files), which is now fully implemented.</li>
+                <li><span class="check-icon">✓</span> <strong>Future Expansions:</strong> The code already contains hints of future features such as a social "feed" (`feed_screen.dart`) and location sharing (`map_screen.dart`), signaling our vision for a broader social network.</li>
+            </ul>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Backend (Deno, TypeScript, Hono - `server/`)</h3>
+            <ul class="tech-list" style="padding: 1rem 2rem;">
+                <li><span class="check-icon">✓</span> <strong>Status:</strong> The backend is built on modern Deno, TypeScript, and Hono technologies, guaranteeing high performance and reliability.</li>
+                <li><span class="check-icon">✓</span> <strong>Database:</strong> We use PostgreSQL with Prisma ORM for robust data management.</li>
+                <li><span class="check-icon">✓</span> <strong>Authentication:</strong> In addition to standard JWT authentication, modern <strong>passkey authentication</strong> (`@simplewebauthn/server`) is implemented, enhancing security and user convenience.</li>
+                <li><span class="check-icon">✓</span> <strong>Services:</strong> The backend provides APIs for user, message, group, space, and media file management. Key components also include services for push notifications (FCM) and WebSocket communication for real-time messages.</li>
+                <li><span class="check-icon">✓</span> <strong>Maintenance:</strong> Regular background tasks are performed, such as cleaning up old messages (`cron/cleanup-messages.ts`), to maintain efficiency and database size.</li>
+            </ul>
+
+            <h3 style="margin-top: 2rem; margin-bottom: 1rem;">Activities and Completed Work (Previous Period)</h3>
+            <ul class="tech-list" style="padding: 1rem 2rem;">
+                <li><span class="check-icon">✓</span> <strong>E2EE Stabilization:</strong> Further improvements and testing of end-to-end encryption for robustness.</li>
+                <li><span class="check-icon">✓</span> <strong>Voice Message Optimization:</strong> Improved recording and playback of voice messages in the application.</li>
+                <li><span class="check-icon">✓</span> <strong>API Expansion:</strong> Minor adjustments and extensions of the backend API for better support of new client-side features.</li>
+                <li><span class="check-icon">✓</span> <strong>Security Enhancements:</strong> Continuous work on securing authentication and the entire system.</li>
+            </ul>
+        </section>
+
+        <!-- 5. ROADMAP -->
+        <section>
+            <h2>What's Next? (Roadmap)</h2>
+            <p>We are doubling down on security and community features for the upcoming release.</p>
+            
+            <div class="grid-2">
+                <div class="card" style="border-left: 4px solid var(--sys-accent);">
+                    <div class="card-icon">🔒</div>
+                    <h3>Group E2EE</h3>
+                    <p>Currently, 1-on-1 chats are fully secure. Next, we are bringing the same rigorous End-to-End Encryption standards to Group Chats.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🗺️</div>
+                    <h3>Live Map</h3>
+                    <p>A privacy-first way to share your location with close friends. Optional, encrypted, and fully under your control.</p>
+                </div>
+                <div class="card" style="opacity: 0.6;">
+                    <div class="card-icon">📰</div>
+                    <h3>Social Feed</h3>
+                    <p>Share posts with your network. <em>Status: Postponed until core messaging features are perfected.</em></p>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="report-footer">
+        <p>Thank you for supporting independent, privacy-focused software.</p>
+        <p style="margin-top: 0.5rem; opacity: 0.6;">&copy; 2025 Clyo Team</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

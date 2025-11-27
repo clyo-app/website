@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clyo - The Future of Communication</title>
+    <title>Clyo - Secure Social Messaging</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -20,6 +20,7 @@
         <nav>
             <a href="#features">Features</a>
             <a href="#security">Security</a>
+            <a href="reports.html">Updates</a>
             <a href="#support">Donate</a> <a href="#subscribe" class="cta-button">Get Notified</a>
         </nav>
     </header>
@@ -28,79 +29,104 @@
         <section class="hero">
             <div class="hero-container">
                 <div class="hero-text-content">
-                    <h1 class="main-heading">Where Messaging Meets Community</h1>
-                    <p class="sub-heading">Experience a new way to connect. Private chats with end-to-end encryption. Community spaces to share your passions. All in one secure app.</p>
+                    <h1 class="main-heading">Social Connection,<br>Without Compromise.</h1>
+                    <p class="sub-heading">Experience a new standard of privacy. End-to-End Encrypted chats, ephemeral stories, and vibrant communities. Connect freely, share securely, and leave no trace behind.</p>
                     <a href="#subscribe" class="hero-cta">Join the Beta</a>
                 </div>
                 <div class="hero-demo">
-                    <img src="./App new.png" alt="Clyo App Preview" class="app-preview-image">
+                    <img src="./Screenshot_debug.png" alt="Clyo App Preview" class="app-preview-image">
                 </div>
             </div>
         </section>
 
         <section id="features" class="features-section">
             <div class="features-container">
-                <h2 class="section-title">Built for Real Connection</h2>
-                <p class="section-subtitle">Two powerful modes, one unified experience</p>
+                <h2 class="section-title">More Than Just Chat</h2>
+                <p class="section-subtitle">A complete social platform that respects your privacy.</p>
                 
-                <div class="features-split">
-                    <div class="feature-mode">
-                        <div class="mode-header">
-                            <div class="mode-icon">💬</div>
-                            <h3>Private Messaging</h3>
-                        </div>
-                        <div class="mode-content">
-                            <div class="mode-item">
-                                <div class="item-number">01</div>
-                                <div class="item-text">
-                                    <h4>One-on-One Chats</h4>
-                                    <p>Secure conversations with friends. End-to-end encrypted, so only you can read what you send.</p>
-                                </div>
-                            </div>
-                            <div class="mode-item">
-                                <div class="item-number">02</div>
-                                <div class="item-text">
-                                    <h4>Group Messages</h4>
-                                    <p>Keep your circle close. Create encrypted group chats with your friends and family.</p>
-                                </div>
-                            </div>
-                        </div>
+                <div class="features-grid">
+                    <!-- Private Messaging -->
+                    <div class="feature-card">
+                        <div class="card-icon">💬</div>
+                        <h3>Secure Messaging</h3>
+                        <p>Chat 1-on-1 or in groups. Every message is encrypted on your device. We can't read them, even if we wanted to.</p>
                     </div>
 
-                    <div class="feature-mode">
-                        <div class="mode-header">
-                            <div class="mode-icon">🏙️</div>
-                            <h3>Community Spaces</h3>
-                        </div>
-                        <div class="mode-content">
-                            <div class="mode-item">
-                                <div class="item-number">01</div>
-                                <div class="item-text">
-                                    <h4>Join Communities</h4>
-                                    <p>Discover and join spaces dedicated to your interests. From tech to hobbies.</p>
-                                </div>
-                            </div>
-                            <div class="mode-item">
-                                <div class="item-number">02</div>
-                                <div class="item-text">
-                                    <h4>Organized Rooms</h4>
-                                    <p>Each space has dedicated rooms for different topics. Keep discussions focused and organized.</p>
-                                </div>
-                            </div>
-                        </div>
+                    <!-- Communities -->
+                    <div class="feature-card">
+                        <div class="card-icon">🏙️</div>
+                        <h3>Spaces & Rooms</h3>
+                        <p>Organize your communities. Create Spaces with dedicated rooms for different topics—text, voice, or announcements.</p>
                     </div>
+
+                    <!-- Stories -->
+                    <div class="feature-card">
+                        <div class="card-icon">📸</div>
+                        <h3>Stories</h3>
+                        <p>Share moments that matter. Photos and videos that disappear after 24 hours. Your life, your control.</p>
+                    </div>
+
+                    <!-- Map -->
+                    <div class="feature-card">
+                        <div class="card-icon">🗺️</div>
+                        <h3>Live Map</h3>
+                        <p>See where your friends are hanging out. Location sharing is strictly opt-in and fully encrypted.</p>
+                    </div>
+
+                    <!-- Notes -->
+                    <div class="feature-card">
+                        <div class="card-icon">💭</div>
+                        <h3>Notes</h3>
+                        <p>Share quick thoughts or status updates with your close circle. A minimal way to stay connected.</p>
+                    </div>
+
+                    <!-- Media -->
+                    <div class="feature-card">
+                        <div class="card-icon">📁</div>
+                        <h3>Ephemeral Media</h3>
+                        <p>Send photos and files securely. They are deleted from our servers the moment they are delivered to recipients.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="security" class="security-section">
+            <h2 class="section-title">Your Data, Your Rules</h2>
+            <p class="section-subtitle">We built Clyo because we were tired of being tracked.</p>
+            
+            <div class="security-grid">
+                <div class="security-card">
+                    <div class="card-header">
+                        <div class="security-icon">🛡️</div>
+                        <h3>E2E Encryption</h3>
+                    </div>
+                    <p>We use industry-standard RSA (4096-bit) and AES-GCM encryption. Private keys are generated on your device and never leave it.</p>
+                </div>
+                <div class="security-card">
+                    <div class="card-header">
+                        <div class="security-icon">👻</div>
+                        <h3>Ephemeral Storage</h3>
+                    </div>
+                    <p>Our servers are just a pipeline. Once a message or file is delivered to all recipients, it is permanently wiped from our database and storage.</p>
+                </div>
+                <div class="security-card">
+                    <div class="card-header">
+                        <div class="security-icon">💾</div>
+                        <h3>Local First</h3>
+                    </div>
+                    <p>Your chat history lives on your device, not in the cloud. You own your data, and you can export or delete it anytime.</p>
                 </div>
             </div>
         </section>
 
         <section id="support" class="support-section">
             <h2 class="section-title">Support the Project</h2>
-            <p class="section-subtitle">Help us keep Clyo independent, secure, and free.</p>
+            <p class="section-subtitle">Help us keep Clyo independent and free.</p>
             
             <div class="support-grid">
                 <div class="support-card donate-card">
                     <h3>☕ Buy us a coffee</h3>
-                    <p>Your donations pay for servers and development time. Every contribution counts.</p>
+                    <p>Your donations pay for servers and development time. Clyo is built by a small, passionate team.</p>
                     <a href="#" class="donate-btn">Donate Now</a>
                 </div>
 
@@ -116,37 +142,10 @@
             </div>
         </section>
 
-        <section id="security" class="security-section">
-            <h2 class="section-title">Privacy First, Always</h2>
-            <div class="security-grid">
-                <div class="security-card">
-                    <div class="card-header">
-                        <div class="security-icon">🛡️</div>
-                        <h3>End-to-End Encryption</h3>
-                    </div>
-                    <p>RSA + AES encryption keeps your messages private. Not even we can read them.</p>
-                </div>
-                <div class="security-card">
-                    <div class="card-header">
-                        <div class="security-icon">🔒</div>
-                        <h3>Zero Knowledge</h3>
-                    </div>
-                    <p>We don't store your keys, backups, or metadata. Complete privacy by design.</p>
-                </div>
-                <div class="security-card">
-                    <div class="card-header">
-                        <div class="security-icon">🌐</div>
-                        <h3>Hardened Infrastructure</h3>
-                    </div>
-                    <p>Modern security standards, strict HTTPS, and protection against common web attacks.</p>
-                </div>
-            </div>
-        </section>
-
         <section id="subscribe" class="subscribe-section">
             <div class="subscribe-content">
-                <h2>Ready to make the switch?</h2>
-                <p>Join thousands of people reclaiming their privacy. Be notified when Clyo launches.</p>
+                <h2>Join the Revolution</h2>
+                <p>Be the first to know when Clyo launches publicly. No spam, just updates.</p>
                 <form id="subscribe-form">
                     <div class="input-wrapper">
                         <input type="email" placeholder="you@example.com" required>
@@ -158,7 +157,7 @@
     </main>
 
     <footer class="main-footer-bottom">
-        <p>&copy; 2025 Clyo. All rights reserved. | A new vision for social media.</p>
+        <p>&copy; 2025 Clyo. All rights reserved.</p>
     </footer>
 
     <script src="script.js"></script>
