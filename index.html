@@ -8,8 +8,68 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
 </head>
 <body>
+    <!-- Intro Animation Screen -->
+    <div id="intro-overlay">
+        <div class="intro-sequence">
+            <!-- Scene 0: Initial Splash (Interactive) -->
+            <div class="intro-scene" id="scene-0">
+                <!-- Background Pattern of Icons -->
+                <div class="icon-pattern">
+                    <span class="material-symbols-rounded float-icon i-1">chat_bubble</span>
+                    <span class="material-symbols-rounded float-icon i-2">lock</span>
+                    <span class="material-symbols-rounded float-icon i-3">groups</span>
+                    <span class="material-symbols-rounded float-icon i-4">mic</span>
+                    <span class="material-symbols-rounded float-icon i-5">photo_camera</span>
+                    <span class="material-symbols-rounded float-icon i-6">map</span>
+                    <span class="material-symbols-rounded float-icon i-7">music_note</span>
+                    <span class="material-symbols-rounded float-icon i-8">bolt</span>
+                </div>
+
+                <div class="splash-content">
+                    <img src="icon-full.png" alt="Clyo" class="splash-logo">
+                    <h1 class="splash-title">Clyo</h1>
+                    <p class="intro-hint blink" style="margin-top: 1rem;">Click to Initialize</p>
+                </div>
+            </div>
+
+            <!-- Scene 1: Privacy -->
+            <div class="intro-scene" id="scene-1">
+                <div class="scene-content">
+                    <span class="material-symbols-rounded scene-icon">visibility_off</span>
+                    <h1 class="kinetic-text">
+                        <span class="fw-900">Privacy</span> <span class="fw-300 text-italic">isn't just</span><br>
+                        <span class="fw-500">a feature.</span>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Scene 2: Foundation -->
+            <div class="intro-scene" id="scene-2">
+                <div class="scene-content">
+                    <span class="material-symbols-rounded scene-icon">security</span>
+                    <h1 class="kinetic-text">
+                        <span class="fw-300">It is</span> <span class="text-italic">the</span><br>
+                        <span class="highlight-text fw-900">Foundation.</span>
+                    </h1>
+                </div>
+            </div>
+
+            <!-- Scene 3: Connection (Last Scene) -->
+            <div class="intro-scene" id="scene-3">
+                <div class="scene-content">
+                    <span class="material-symbols-rounded scene-icon">verified</span>
+                    <h1 class="kinetic-text">
+                        <span class="fw-500">Real</span> <span class="fw-900">Friends.</span><br>
+                        <span class="text-italic fw-300">Real Connection.</span>
+                    </h1>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <canvas id="particles-js"></canvas>
 
     <header class="main-header">
