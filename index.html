@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clyo - Secure Social Messaging</title>
+    <title>Clyo - Connect with your Inner Circle</title>
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,8 +19,8 @@
         </div>
         <nav>
             <a href="#features">Features</a>
-            <a href="#security">Security</a>
-            <a href="reports.html">Updates</a>
+            <a href="#security">Privacy</a>
+            <a href="reports.html">Blog</a>
             <a href="#support">Donate</a> <a href="#subscribe" class="cta-button">Get Notified</a>
         </nav>
     </header>
@@ -29,8 +29,8 @@
         <section class="hero">
             <div class="hero-container">
                 <div class="hero-text-content">
-                    <h1 class="main-heading">Social Connection,<br>Without Compromise.</h1>
-                    <p class="sub-heading">Experience a new standard of privacy. End-to-End Encrypted chats, ephemeral stories, and vibrant communities. Connect freely, share securely, and leave no trace behind.</p>
+                    <h1 class="main-heading">Real Friends.<br>Real Privacy.</h1>
+                    <p class="sub-heading">Clyo isn't for meeting strangers. It's for staying close to the people you already know. No algorithms, no ads, just you and your circle—securely.</p>
                     <a href="#subscribe" class="hero-cta">Join the Beta</a>
                 </div>
                 <div class="hero-demo">
@@ -41,98 +41,115 @@
 
         <section id="features" class="features-section">
             <div class="features-container">
-                <h2 class="section-title">More Than Just Chat</h2>
-                <p class="section-subtitle">A complete social platform that respects your privacy.</p>
+                <h2 class="section-title">Built for Your Inner Circle</h2>
+                <p class="section-subtitle">All the features you love from your favorite apps, combined into one private ecosystem.</p>
                 
-                <div class="features-grid">
-                    <!-- Private Messaging -->
-                    <div class="feature-card">
+                <div class="bento-grid">
+                    <!-- Messaging (Wide) -->
+                    <div class="feature-card grid-col-span-2">
                         <div class="card-icon">💬</div>
-                        <h3>Secure Messaging</h3>
-                        <p>Chat 1-on-1 or in groups. Every message is encrypted on your device. We can't read them, even if we wanted to.</p>
+                        <div>
+                            <h3>Everything You Expect</h3>
+                            <p>Direct 1:1 chats and dynamic groups with all the essentials: replies, reactions, voice notes, and more. It works just like the apps you're used to, but with total privacy baked in.</p>
+                        </div>
                     </div>
 
-                    <!-- Communities -->
+                    <!-- Spaces -->
                     <div class="feature-card">
                         <div class="card-icon">🏙️</div>
-                        <h3>Spaces & Rooms</h3>
-                        <p>Organize your communities. Create Spaces with dedicated rooms for different topics—text, voice, or announcements.</p>
+                        <div>
+                            <h3>Spaces & Servers</h3>
+                            <p>For your larger communities. Organize conversations into 'Spaces' with dedicated channels for text, voice, or announcements. Think Discord, but private.</p>
+                        </div>
                     </div>
 
-                    <!-- Stories -->
+                    <!-- Status (Tall) -->
                     <div class="feature-card">
-                        <div class="card-icon">📸</div>
-                        <h3>Stories</h3>
-                        <p>Share moments that matter. Photos and videos that disappear after 24 hours. Your life, your control.</p>
+                        <div class="card-icon">🪪</div>
+                        <div>
+                            <h3>Live Status Card</h3>
+                            <p>A real-time window into your friends' world, featuring rich status updates.</p>
+                            <ul style="margin-top: 1rem; list-style: none; padding: 0; display: flex; flex-direction: column; gap: 0.5rem;">
+                                <li style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <span>🎵</span> <span><strong>Spotify Integration:</strong> See what they're listening to.</span>
+                                </li>
+                                <li style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <span>📸</span> <span><strong>Stories:</strong> Share moments for 24h.</span>
+                                </li>
+                                <li style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <span>📍</span> <span><strong>Live Location:</strong> Real-time tracking (opt-in).</span>
+                                </li>
+                                <li style="display: flex; gap: 0.5rem; align-items: center;">
+                                    <span>💭</span> <span><strong>Notes:</strong> Quick thoughts on your profile.</span>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
 
-                    <!-- Map -->
-                    <div class="feature-card">
+                    <!-- Map (Wide) -->
+                    <div class="feature-card grid-col-span-2">
                         <div class="card-icon">🗺️</div>
-                        <h3>Live Map</h3>
-                        <p>See where your friends are hanging out. Location sharing is strictly opt-in and fully encrypted.</p>
+                        <div>
+                            <h3>The Map</h3>
+                            <p>See where your friends are hanging out right now and rediscover shared memories on a living map. It's the best way to see who's free or where the fun is happening.</p>
+                        </div>
                     </div>
 
-                    <!-- Notes -->
-                    <div class="feature-card">
-                        <div class="card-icon">💭</div>
-                        <h3>Notes</h3>
-                        <p>Share quick thoughts or status updates with your close circle. A minimal way to stay connected.</p>
-                    </div>
-
-                    <!-- Media -->
-                    <div class="feature-card">
-                        <div class="card-icon">📁</div>
-                        <h3>Ephemeral Media</h3>
-                        <p>Send photos and files securely. They are deleted from our servers the moment they are delivered to recipients.</p>
+                    <!-- Media (Full Width) -->
+                    <div class="feature-card grid-col-span-3">
+                        <div class="card-icon">💎</div>
+                        <div>
+                            <h3>Uncompromised Media</h3>
+                            <p>Stop sending blurry photos. Clyo sends your media exactly as you took it. No compression, no quality loss. Send files up to <strong>50GB</strong>—perfect for 4K video, RAW photos, or large archives.</p>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
         <section id="security" class="security-section">
-            <h2 class="section-title">Your Data, Your Rules</h2>
-            <p class="section-subtitle">We built Clyo because we were tired of being tracked.</p>
+            <h2 class="section-title">Safety First, Always.</h2>
+            <p class="section-subtitle">We built Clyo to be the safest place for your conversations.</p>
             
             <div class="security-grid">
                 <div class="security-card">
                     <div class="card-header">
-                        <div class="security-icon">🛡️</div>
-                        <h3>E2E Encryption</h3>
+                        <div class="security-icon">🔒</div>
+                        <h3>End-to-End Encrypted</h3>
                     </div>
-                    <p>We use industry-standard RSA (4096-bit) and AES-GCM encryption. Private keys are generated on your device and never leave it.</p>
+                    <p>Only you and the person you're talking to can read your messages. Not us, not your internet provider, nobody. It's automatic and always on.</p>
                 </div>
                 <div class="security-card">
                     <div class="card-header">
                         <div class="security-icon">👻</div>
-                        <h3>Ephemeral Storage</h3>
+                        <h3>Truly Ephemeral</h3>
                     </div>
-                    <p>Our servers are just a pipeline. Once a message or file is delivered to all recipients, it is permanently wiped from our database and storage.</p>
+                    <p>We don't hoard your data. Once a message is delivered, it's wiped from our servers forever. Your history lives on your phone, where it belongs.</p>
                 </div>
                 <div class="security-card">
                     <div class="card-header">
-                        <div class="security-icon">💾</div>
-                        <h3>Local First</h3>
+                        <div class="security-icon">🛡️</div>
+                        <h3>No Tracking</h3>
                     </div>
-                    <p>Your chat history lives on your device, not in the cloud. You own your data, and you can export or delete it anytime.</p>
+                    <p>We don't track who you talk to, where you go, or what you share. There is no "algorithm" trying to keep you addicted.</p>
                 </div>
             </div>
         </section>
 
         <section id="support" class="support-section">
-            <h2 class="section-title">Support the Project</h2>
-            <p class="section-subtitle">Help us keep Clyo independent and free.</p>
+            <h2 class="section-title">Support Independent Tech</h2>
+            <p class="section-subtitle">Clyo is built by a small, passionate team fighting for a better internet.</p>
             
             <div class="support-grid">
                 <div class="support-card donate-card">
                     <h3>☕ Buy us a coffee</h3>
-                    <p>Your donations pay for servers and development time. Clyo is built by a small, passionate team.</p>
+                    <p>We don't sell your data, so we rely on your support to keep the servers running and the code brewing.</p>
                     <a href="#" class="donate-btn">Donate Now</a>
                 </div>
 
                 <div class="support-card sponsors-card">
                     <h3>Our Partners</h3>
-                    <p>Proudly supported by:</p>
+                    <p>Powered by organizations that believe in privacy:</p>
                     <div class="sponsors-list">
                         <a href="https://fkht.cz" target="_blank" class="sponsor-logo">
                             <img src="fkht-full.svg" alt="FKHT Logo">
@@ -144,11 +161,11 @@
 
         <section id="subscribe" class="subscribe-section">
             <div class="subscribe-content">
-                <h2>Join the Revolution</h2>
-                <p>Be the first to know when Clyo launches publicly. No spam, just updates.</p>
+                <h2>Get Early Access</h2>
+                <p>We are launching soon. Sign up to be notified when the beta opens for your region.</p>
                 <form id="subscribe-form">
                     <div class="input-wrapper">
-                        <input type="email" placeholder="you@example.com" required>
+                        <input type="email" placeholder="name@example.com" required>
                         <button type="submit">Notify Me</button>
                     </div>
                 </form>
