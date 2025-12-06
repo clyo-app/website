@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // --- Cinematic Intro Sequencer ---
     const introOverlay = document.getElementById('intro-overlay');
     const mainContent = document.querySelector('main');
-    // Removed scene-final, scene-3 is now the end
     const sceneIds = ['scene-0', 'scene-1', 'scene-2', 'scene-3'];
     const defaultDuration = 2400; 
 
@@ -119,36 +118,49 @@ document.addEventListener('DOMContentLoaded', () => {
         ambienceNodes.push(osc1, osc2, gain);
     }
 
-    // 4. Noise Burst (Explosion SFX)
-    function playNoiseBurst() {
+    // 4. Explosion SFX (Clean & Deep)
+    function playExplosion() {
         if (!audioCtx) return;
         const t = audioCtx.currentTime;
-        const duration = 0.5;
-        
-        const bufferSize = audioCtx.sampleRate * duration;
+
+        // A. Soft Noise Burst (The "Air")
+        const bufferSize = audioCtx.sampleRate * 0.5;
         const buffer = audioCtx.createBuffer(1, bufferSize, audioCtx.sampleRate);
         const data = buffer.getChannelData(0);
         for (let i = 0; i < bufferSize; i++) {
             data[i] = Math.random() * 2 - 1;
         }
-
         const noise = audioCtx.createBufferSource();
         noise.buffer = buffer;
-
-        const filter = audioCtx.createBiquadFilter();
-        filter.type = 'lowpass';
-        filter.frequency.setValueAtTime(1000, t);
-        filter.frequency.exponentialRampToValueAtTime(50, t + duration);
-
-        const gain = audioCtx.createGain();
-        gain.gain.setValueAtTime(0.5, t);
-        gain.gain.exponentialRampToValueAtTime(0.01, t + duration);
-
-        noise.connect(filter);
-        filter.connect(gain);
-        gain.connect(masterGain);
         
+        const noiseFilter = audioCtx.createBiquadFilter();
+        noiseFilter.type = 'lowpass';
+        noiseFilter.frequency.setValueAtTime(600, t); // Muffled start (no static)
+        noiseFilter.frequency.exponentialRampToValueAtTime(50, t + 0.4);
+
+        const noiseGain = audioCtx.createGain();
+        noiseGain.gain.setValueAtTime(0.15, t); // Much quieter
+        noiseGain.gain.exponentialRampToValueAtTime(0.001, t + 0.4);
+
+        noise.connect(noiseFilter);
+        noiseFilter.connect(noiseGain);
+        noiseGain.connect(audioCtx.destination); 
         noise.start(t);
+
+        // B. Sub-Bass Kick (The "Impact")
+        const osc = audioCtx.createOscillator();
+        const kickGain = audioCtx.createGain();
+        
+        osc.frequency.setValueAtTime(120, t);
+        osc.frequency.exponentialRampToValueAtTime(0.01, t + 0.5);
+        
+        kickGain.gain.setValueAtTime(0.4, t); // Prevent clipping
+        kickGain.gain.exponentialRampToValueAtTime(0.01, t + 0.5);
+        
+        osc.connect(kickGain);
+        kickGain.connect(audioCtx.destination); 
+        osc.start(t);
+        osc.stop(t + 0.6);
     }
 
     function fadeOutAudio() {
@@ -244,10 +256,12 @@ document.addEventListener('DOMContentLoaded', () => {
                         setTimeout(() => {
                             // The BOOM (Happy Ending)
                             if (audioCtx && audioCtx.state === 'running') {
-                                playChord([N.Eb2, N.Eb3, N.G3, N.Bb3], 0.6);
-                                playNoiseBurst(); // Added SFX
+                                playChord([N.Eb2, N.Eb3, N.G3, N.Bb3], 0.25); // Lower vol to prevent clip
+                                playExplosion(); // New punchy SFX
                             }
-                            fadeOutAudio(); // Slow fade out
+                            
+                            // Delay fade out slightly so the impact hits first
+                            setTimeout(fadeOutAudio, 800);
                             
                             introOverlay.classList.add('digital-boom');
                             mainContent.style.opacity = '1';
@@ -288,17 +302,39 @@ document.addEventListener('DOMContentLoaded', () => {
         observer.observe(section);
     });
 
-    // --- Hide header on scroll ---
+    // --- Hide header on scroll and adjust legal nav ---
     let lastScrollTop = 0;
     const header = document.querySelector('.main-header');
+    const legalNav = document.querySelector('.legal-nav'); // Get legal nav
+    
+    // Initial headerHeight calculation
+    let headerHeight = 0;
+    if (header) {
+        headerHeight = header.offsetHeight;
+    }
+
     window.addEventListener('scroll', function() {
         let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-        if (scrollTop > lastScrollTop && scrollTop > header.offsetHeight) {
-            header.style.top = '-200px'; 
+        
+        if (scrollTop > lastScrollTop && scrollTop > headerHeight) {
+            // Scrolling down, hide header
+            header.style.top = `-${headerHeight}px`; // Hide by its full height
         } else {
+            // Scrolling up, show header
             header.style.top = '0';
         }
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
+
+        // Adjust legal nav position if it exists and current page is legal.html
+        if (legalNav && window.location.pathname.includes('legal.html')) {
+            if (header.style.top === `-${headerHeight}px`) {
+                // Header is hidden, legal nav sticks to top
+                legalNav.style.top = '20px'; // Small offset
+            } else {
+                // Header is visible, legal nav below header
+                legalNav.style.top = `${headerHeight + 20}px`; // Header height + offset
+            }
+        }
     });
 
     // --- Subscription Form ---

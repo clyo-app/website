@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal - Clyo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="icon-full.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <style>
+        /* Specific styles for Legal Page to make text readable */
+        .legal-container {
+            max-width: 900px;
+            margin: 120px auto 4rem;
+            padding: 0 5%;
+        }
+        
+        .legal-nav {
+            position: sticky;
+            top: 100px;
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 3rem;
+            background: rgba(44, 22, 0, 0.8);
+            padding: 1rem;
+            border-radius: 50px;
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--md-sys-surface-container-highest);
+            z-index: 10;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .legal-nav a {
+            color: var(--md-sys-on-surface-variant);
+            text-decoration: none;
+            font-weight: 500;
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            transition: all 0.3s ease;
+        }
+
+        .legal-nav a:hover, .legal-nav a.active {
+            background: var(--md-sys-primary);
+            color: var(--md-sys-on-primary);
+        }
+
+        .legal-section {
+            margin-bottom: 6rem;
+            scroll-margin-top: 180px; /* Offset for sticky header */
+        }
+
+        .legal-content {
+            background: var(--md-sys-surface-container-high);
+            border: 1px solid var(--md-sys-surface-container-highest);
+            border-radius: 24px;
+            padding: 3rem;
+            color: var(--md-sys-on-surface-variant);
+            line-height: 1.8;
+        }
+
+        .legal-content h2 {
+            color: var(--md-sys-on-surface);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            border-bottom: 1px solid var(--md-sys-surface-container-highest);
+            padding-bottom: 1rem;
+        }
+
+        .legal-content h3 {
+            color: var(--md-sys-on-surface);
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            margin-bottom: 1rem;
+        }
+
+        .legal-content p, .legal-content ul {
+            margin-bottom: 1rem;
+        }
+
+        .legal-content ul {
+            padding-left: 1.5rem;
+        }
+
+        .legal-content li {
+            margin-bottom: 0.5rem;
+        }
+
+        .last-updated {
+            font-size: 0.9rem;
+            opacity: 0.7;
+            margin-bottom: 2rem;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="particles-js"></canvas>
+
+    <header class="main-header">
+        <div class="logo" onclick="window.location.href='index.html'">
+            <img src="icon-full.png" alt="Clyo Logo">
+            <span>Clyo</span>
+        </div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="index.html#features">Features</a>
+            <a href="#tos">Terms</a>
+            <a href="#privacy">Privacy</a>
+        </nav>
+    </header>
+
+    <main class="legal-container">
+        
+        <nav class="legal-nav">
+            <a href="#tos">Terms of Service</a>
+            <a href="#privacy">Privacy Policy</a>
+            <a href="#gdpr">GDPR Compliance</a>
+        </nav>
+
+        <!-- TERMS OF SERVICE -->
+        <section id="tos" class="legal-section">
+            <div class="legal-content">
+                <h2>Terms of Service</h2>
+                <span class="last-updated">Last Updated: December 6, 2025</span>
+
+                <p>Welcome to Clyo. By creating an account or using our application, you agree to these terms. Our mission is to provide private, secure communication.</p>
+
+                <h3>1. Use of Service</h3>
+                <p>You must be at least 16 years old (or the minimum age required in your country for data consent) to use Clyo. You agree to use the service only for legal purposes and not to violate any laws in your jurisdiction.</p>
+
+                <h3>2. Your Content & Permissions</h3>
+                <p><strong>You own your data.</strong> Clyo does not claim ownership of the messages, media, or files you send.</p>
+                <p>Because our service is End-to-End Encrypted (E2EE), <strong>we cannot see, read, or listen to your private messages or calls.</strong></p>
+                <p>You grant us a limited license solely to transmit (route) your encrypted data to your intended recipients. Once delivered, this data is deleted from our servers.</p>
+
+                <h3>3. Acceptable Use</h3>
+                <p>You agree not to use Clyo to:</p>
+                <ul>
+                    <li>Distribute malware, viruses, or harmful code.</li>
+                    <li>Engage in automated spamming or bulk messaging.</li>
+                    <li>Attempt to reverse engineer the Clyo application or protocol.</li>
+                    <li>Threaten or harass other users.</li>
+                </ul>
+
+                <h3>4. Termination</h3>
+                <p>We reserve the right to suspend your account if you violate these terms. However, because we cannot read your messages, moderation is limited to metadata analysis (e.g., spam patterns) and user reports.</p>
+
+                <h3>5. Disclaimer</h3>
+                <p>Clyo is provided "as is". While we strive for maximum security and 99.9% uptime, we cannot guarantee that the service will be uninterrupted or error-free.</p>
+            </div>
+        </section>
+
+        <!-- PRIVACY POLICY -->
+        <section id="privacy" class="legal-section">
+            <div class="legal-content">
+                <h2>Privacy Policy</h2>
+                <span class="last-updated">Last Updated: December 6, 2025</span>
+
+                <p>At Clyo, privacy isn't just a feature; it's the foundation. We collect the absolute minimum amount of data required to make the app function.</p>
+
+                <h3>1. Data We Do Not Collect</h3>
+                <ul>
+                    <li><strong>Message Content:</strong> All 1:1 chats, group chats, and calls are End-to-End Encrypted. We literally cannot decrypt them.</li>
+                    <li><strong>Media Files:</strong> Photos and large files (up to 50GB) are encrypted on your device before uploading. They are stored temporarily for delivery and then permanently deleted from our servers.</li>
+                    <li><strong>Location History:</strong> We do not log your movements. Live Location is fleeting and encrypted.</li>
+                </ul>
+
+                <h3>2. Data We Do Collect</h3>
+                <p>To operate the service, we must process minimal metadata:</p>
+                <ul>
+                    <li><strong>Account Info:</strong> Your username, public keys (for encryption), and profile picture (if set).</li>
+                    <li><strong>Connection Data:</strong> Temporary IP logs for rate-limiting and preventing DDOS attacks. These are rotated and wiped regularly.</li>
+                    <li><strong>Contacts:</strong> If you enable contact syncing, we use a privacy-preserving hash matching to find friends. Your raw address book is never stored on our servers.</li>
+                </ul>
+
+                <h3>3. Third-Party Services</h3>
+                <p><strong>Spotify Integration:</strong> If you choose to link Spotify, we display your "Currently Playing" status to your contacts. This data is fetched directly from Spotify's API and is not stored by Clyo.</p>
+                <p><strong>Push Notifications:</strong> To notify you of new messages when the app is closed, we use standard push services (Apple APNs / Google FCM). The content of the notification is encrypted.</p>
+            </div>
+        </section>
+
+        <!-- GDPR -->
+        <section id="gdpr" class="legal-section">
+            <div class="legal-content">
+                <h2>GDPR Compliance</h2>
+                <p>If you are a user in the European Economic Area (EEA), you have specific rights regarding your personal data.</p>
+
+                <h3>1. Your Rights</h3>
+                <ul>
+                    <li><strong>Right to Access:</strong> You can request a copy of your account data. (Note: Since we don't store message history, this will mostly be account metadata).</li>
+                    <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> You can delete your account at any time within the app. This permanently wipes your cryptographic keys from our directory, making any undelivered messages unreadable.</li>
+                    <li><strong>Right to Portability:</strong> You can export your locally stored chat history from the app settings.</li>
+                </ul>
+
+                <h3>2. Data Controller</h3>
+                <p>Clyo is developed by the Clyo Team.</p>
+                <p>For any privacy-related questions or to exercise your rights, please contact us at: <strong>privacy@clyo.online</strong> (Placeholder).</p>
+
+                <h3>3. International Transfers</h3>
+                <p>We use servers located in secure data centers. We ensure that any data transfer complies with EU Standard Contractual Clauses (SCCs).</p>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer-bottom">
+        <p>&copy; 2025 Clyo. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
