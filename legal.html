@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal - Clyo</title>
+    <title>Legal Information - Clyo</title>
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="icon-full.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,7 +12,7 @@
     <style>
         /* Specific styles for Legal Page to make text readable */
         .legal-container {
-            max-width: 900px;
+            max-width: 1200px; /* Increased width to better accommodate the table */
             margin: 120px auto 4rem;
             padding: 0 5%;
         }
@@ -76,7 +76,15 @@
             margin-bottom: 1rem;
         }
 
-        .legal-content p, .legal-content ul {
+        .legal-content h4 {
+            color: var(--md-sys-on-surface);
+            font-size: 1.1rem;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .legal-content p, .legal-content ul, .legal-content table {
             margin-bottom: 1rem;
         }
 
@@ -86,6 +94,23 @@
 
         .legal-content li {
             margin-bottom: 0.5rem;
+        }
+
+        .legal-content table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1rem;
+        }
+
+        .legal-content th, .legal-content td {
+            border: 1px solid var(--md-sys-surface-container-highest);
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .legal-content th {
+            background-color: var(--md-sys-surface-container-highest);
+            color: var(--md-sys-on-surface);
         }
 
         .last-updated {
@@ -124,32 +149,46 @@
         <section id="tos" class="legal-section">
             <div class="legal-content">
                 <h2>Terms of Service</h2>
-                <span class="last-updated">Last Updated: December 6, 2025</span>
+                <span class="last-updated">Last Updated: December 7, 2025</span>
 
-                <p>Welcome to Clyo. By creating an account or using our application, you agree to these terms. Our mission is to provide private, secure communication.</p>
+                <p>Welcome to Clyo. By creating an account or using our application, you agree to these terms. Our mission is to provide private and secure communication.</p>
 
-                <h3>1. Use of Service</h3>
-                <p>You must be at least 16 years old (or the minimum age required in your country for data consent) to use Clyo. You agree to use the service only for legal purposes and not to violate any laws in your jurisdiction.</p>
+                <h3>1. Acceptance of Terms</h3>
+                <p>By using the Clyo application, you agree to these Terms of Service. If you do not agree, please do not use the application.</p>
 
-                <h3>2. Your Content & Permissions</h3>
-                <p><strong>You own your data.</strong> Clyo does not claim ownership of the messages, media, or files you send.</p>
-                <p>Because our service is End-to-End Encrypted (E2EE), <strong>we cannot see, read, or listen to your private messages or calls.</strong></p>
-                <p>You grant us a limited license solely to transmit (route) your encrypted data to your intended recipients. Once delivered, this data is deleted from our servers.</p>
+                <h3>2. Age Requirements</h3>
+                <p>You must be at least <strong>16 years old</strong> (or the minimum age required for digital consent in your country within the EU) to use Clyo. If you are younger, you need parental consent.</p>
 
-                <h3>3. Acceptable Use</h3>
-                <p>You agree not to use Clyo to:</p>
+                <h3>3. Lawful Use</h3>
+                <p>You agree to use the service only for lawful purposes. You are prohibited from:</p>
                 <ul>
-                    <li>Distribute malware, viruses, or harmful code.</li>
-                    <li>Engage in automated spamming or bulk messaging.</li>
-                    <li>Attempt to reverse engineer the Clyo application or protocol.</li>
-                    <li>Threaten or harass other users.</li>
+                    <li>Distributing malware, viruses, or other harmful code.</li>
+                    <li>Engaging in automated spamming or bulk messaging.</li>
+                    <li>Attempting to reverse engineer the Clyo application or protocol.</li>
+                    <li>Threatening or harassing other users.</li>
                 </ul>
 
-                <h3>4. Termination</h3>
-                <p>We reserve the right to suspend your account if you violate these terms. However, because we cannot read your messages, moderation is limited to metadata analysis (e.g., spam patterns) and user reports.</p>
+                <h3>4. Content Ownership</h3>
+                <p><strong>You own your data.</strong> Clyo does not claim ownership of the messages, media, or files you send.</p>
+                <p>Since our service is End-to-End Encrypted (E2EE), <strong>we cannot read or listen to your private messages or calls.</strong></p>
+                <p>You grant us a limited license solely necessary to transmit (route) your encrypted data to the intended recipients. Once delivered, this data is deleted from our servers.</p>
 
-                <h3>5. Disclaimer</h3>
-                <p>Clyo is provided "as is". While we strive for maximum security and 99.9% uptime, we cannot guarantee that the service will be uninterrupted or error-free.</p>
+                <h3>5. Termination</h3>
+                <p>We reserve the right to suspend your account if you violate these terms. Since we cannot read your messages, moderation is limited to metadata analysis (e.g., spam patterns) and user reporting.</p>
+                <p>You can delete your account at any time directly in the application settings.</p>
+
+                <h3>6. Disclaimer and Warranties</h3>
+                <p>The Clyo service is provided "as is". While we strive for maximum security and availability, we cannot guarantee that the service will always be uninterrupted or error-free. We are not liable for indirect damages arising from the use of the application.</p>
+
+                <h3>7. Governing Law</h3>
+                <p>These terms are governed by the laws of the <strong>Czech Republic</strong>. Any disputes will be resolved by the competent courts in the Czech Republic.</p>
+
+                <h3>8. DSA Compliance (EU Regulation 2022/2065)</h3>
+                <ul>
+                    <li><strong>Report Illegal Content:</strong> <a href="mailto:abuse@clyo.online">abuse@clyo.online</a></li>
+                    <li><strong>Content Moderation Appeals:</strong> <a href="mailto:appeal@clyo.online">appeal@clyo.online</a></li>
+                    <li><strong>Annual Transparency Report:</strong> Available at <a href="https://clyo.online/transparency">clyo.online/transparency</a></li>
+                </ul>
             </div>
         </section>
 
@@ -157,50 +196,137 @@
         <section id="privacy" class="legal-section">
             <div class="legal-content">
                 <h2>Privacy Policy</h2>
-                <span class="last-updated">Last Updated: December 6, 2025</span>
+                <span class="last-updated">Last Updated: December 7, 2025</span>
 
-                <p>At Clyo, privacy isn't just a feature; it's the foundation. We collect the absolute minimum amount of data required to make the app function.</p>
+                <p>At Clyo, privacy is a foundation, not just a feature. We collect only the absolute minimum data necessary for the application to function.</p>
 
-                <h3>1. Data We Do Not Collect</h3>
+                <h3>1. Data Controller (Who We Are)</h3>
+                <p>The controller of your personal data is:</p>
                 <ul>
-                    <li><strong>Message Content:</strong> All 1:1 chats, group chats, and calls are End-to-End Encrypted. We literally cannot decrypt them.</li>
-                    <li><strong>Media Files:</strong> Photos and large files (up to 50GB) are encrypted on your device before uploading. They are stored temporarily for delivery and then permanently deleted from our servers.</li>
-                    <li><strong>Location History:</strong> We do not log your movements. Live Location is fleeting and encrypted.</li>
+                    <li><strong>Name / Company:</strong> Lukáš Mašín</li>
+                    <li><strong>Address:</strong> Sázava, sídliště 9. května 302, Czech Republic</li>
+                    <li><strong>Email:</strong> mail@lukymas.eu.org</li>
+                    <li><strong>Supervisory Authority:</strong> Office for Personal Data Protection (ÚOOÚ), <a href="https://www.uoou.cz" target="_blank">www.uoou.cz</a></li>
+                    <li><strong>Data Protection Officer:</strong> Lukáš Mašín (mail@lukymas.eu.org) acts as the responsible person.</li>
                 </ul>
 
-                <h3>2. Data We Do Collect</h3>
-                <p>To operate the service, we must process minimal metadata:</p>
+                <h3>2. What Data We Process and Why</h3>
+                <p>We process data based on the GDPR regulation. Here is an overview of the data:</p>
+
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Data Type</th>
+                            <th>Purpose</th>
+                            <th>Legal Basis</th>
+                            <th>Retention</th>
+                            <th>Source</th>
+                            <th>Recipients</th>
+                            <th>Automated?</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Account</strong></td>
+                            <td>Identification, Encryption</td>
+                            <td>Art. 6(1)(b)</td>
+                            <td>Account duration</td>
+                            <td>User Registration</td>
+                            <td>Reek.cz (Hosting)</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>IP Logs</strong></td>
+                            <td>Security, DDOS Protection</td>
+                            <td>Art. 6(1)(f)</td>
+                            <td>Max. 7 days</td>
+                            <td>System/Network</td>
+                            <td>Reek.cz (Hosting)</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Contacts</strong></td>
+                            <td>Friend Discovery (Hashed)</td>
+                            <td>Art. 6(1)(a)</td>
+                            <td>Transient (Not stored)</td>
+                            <td>Address Book</td>
+                            <td>None (Internal match)</td>
+                            <td>No</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Spotify</strong></td>
+                            <td>Status Display</td>
+                            <td>Art. 6(1)(a)</td>
+                            <td>Until disconnected</td>
+                            <td>Spotify API</td>
+                            <td>User's Contacts</td>
+                            <td>No</td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <h3>3. Data We DO NOT Collect</h3>
                 <ul>
-                    <li><strong>Account Info:</strong> Your username, public keys (for encryption), and profile picture (if set).</li>
-                    <li><strong>Connection Data:</strong> Temporary IP logs for rate-limiting and preventing DDOS attacks. These are rotated and wiped regularly.</li>
-                    <li><strong>Contacts:</strong> If you enable contact syncing, we use a privacy-preserving hash matching to find friends. Your raw address book is never stored on our servers.</li>
+                    <li><strong>Message Content:</strong> All private and group chats are End-to-End Encrypted (E2EE). We have no technical ability to decrypt them.</li>
+                    <li><strong>Media:</strong> Photos and files are encrypted on your device before upload. After delivery, they are deleted from the server.</li>
+                    <li><strong>Location History:</strong> We do not track your movements. Location sharing is encrypted and temporary.</li>
                 </ul>
 
-                <h3>3. Third-Party Services</h3>
-                <p><strong>Spotify Integration:</strong> If you choose to link Spotify, we display your "Currently Playing" status to your contacts. This data is fetched directly from Spotify's API and is not stored by Clyo.</p>
-                <p><strong>Push Notifications:</strong> To notify you of new messages when the app is closed, we use standard push services (Apple APNs / Google FCM). The content of the notification is encrypted.</p>
+                <h3>4. Who We Share Your Data With</h3>
+                <p>We do not sell your personal data. We only share it with technical providers necessary for the operation of the service:</p>
+                <ul>
+                    <li><strong>Push Notifications:</strong> Apple (APNs) and Google (FCM) act as data processors operating under standard Data Processing Agreements (DPA). While they facilitate delivery, the content of notifications remains encrypted.</li>
+                    <li><strong>Spotify:</strong> If you connect an account, data is shared according to the Spotify API.</li>
+                    <li><strong>Hosting:</strong> Reek.cz (Server Infrastructure). For providers outside the EU, we ensure protection using Standard Contractual Clauses (SCC).</li>
+                </ul>
+
+                <h4>Data Processing Agreements (DPA)</h4>
+                <ul>
+                    <li><strong>Reek.cz:</strong> Hosting provider operating under a specific Data Processing Agreement.</li>
+                    <li><strong>Apple (APNs) & Google (FCM):</strong> Operating under their standard Data Processing Agreements for push notification services.</li>
+                </ul>
+
+                <h3>5. Security</h3>
+                <p>We use state-of-the-art technology to protect your data:</p>
+                <ul>
+                    <li><strong>E2EE:</strong> Custom implementation / Signal protocol for messages.</li>
+                    <li><strong>Transmission:</strong> All communication takes place over a secure TLS 1.3 connection.</li>
+                    <li><strong>Infrastructure:</strong> Protection against attacks, rate limiting, and minimization of stored data.</li>
+                </ul>
+
+                <h3>6. Children's Privacy</h3>
+                <p>We do not knowingly collect personal data from children under 16 without parental consent. If we become aware that we have collected personal data from a child without valid consent, we will take steps to delete that information.</p>
             </div>
         </section>
 
-        <!-- GDPR -->
+        <!-- GDPR COMPLIANCE -->
         <section id="gdpr" class="legal-section">
             <div class="legal-content">
-                <h2>GDPR Compliance</h2>
-                <p>If you are a user in the European Economic Area (EEA), you have specific rights regarding your personal data.</p>
+                <h2>GDPR and Your Rights</h2>
+                <p>As a user in the EU, you have strong privacy rights. We respect them in full.</p>
 
-                <h3>1. Your Rights</h3>
+                <h3>1. Overview of Your Rights</h3>
                 <ul>
-                    <li><strong>Right to Access:</strong> You can request a copy of your account data. (Note: Since we don't store message history, this will mostly be account metadata).</li>
-                    <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> You can delete your account at any time within the app. This permanently wipes your cryptographic keys from our directory, making any undelivered messages unreadable.</li>
-                    <li><strong>Right to Portability:</strong> You can export your locally stored chat history from the app settings.</li>
+                    <li><strong>Right to Access:</strong> You can request a copy of the personal data we hold about you (primarily account metadata).</li>
+                    <li><strong>Right to Erasure ("Right to be Forgotten"):</strong> You can delete your account at any time in the app. This immediately removes your cryptographic keys and profile.</li>
+                    <li><strong>Right to Portability:</strong> In the app settings, you can export your local chat history.</li>
+                    <li><strong>Right to Object:</strong> You have the right to object to processing based on legitimate interest.</li>
+                    <li><strong>Withdrawal of Consent:</strong> You can withdraw consent for contact synchronization or Spotify at any time in the settings.</li>
                 </ul>
 
-                <h3>2. Data Controller</h3>
-                <p>Clyo is developed by the Clyo Team.</p>
-                <p>For any privacy-related questions or to exercise your rights, please contact us at: <strong>privacy@clyo.online</strong> (Placeholder).</p>
+                <h3>2. How to Exercise Your Rights</h3>
+                <p>To exercise any of the above rights, please contact us at: <strong>gdpr@clyo.online</strong>.</p>
+                <p>We will respond to your request within 30 days at the latest.</p>
+                <p><strong>ÚOOÚ Registration:</strong> RPU-XXXXX/2025 [Pending Registration]</p>
 
-                <h3>3. International Transfers</h3>
-                <p>We use servers located in secure data centers. We ensure that any data transfer complies with EU Standard Contractual Clauses (SCCs).</p>
+                <h3>3. International Data Transfers</h3>
+                <p>If data is transferred outside the European Economic Area (EEA), it is only to servers that meet strict security standards and are protected by legal mechanisms such as Standard Contractual Clauses (SCC) approved by the European Commission.</p>
+
+                <h3>4. Automated Decision Making</h3>
+                <p>We do not use profiling or automated decision-making processes (GDPR Art. 22).</p>
+
+                <h3>5. Changes to Policy</h3>
+                <p>We will notify you of significant changes via app notification or email at least 30 days before they take effect. Continued use after this period implies acceptance.</p>
             </div>
         </section>
 
